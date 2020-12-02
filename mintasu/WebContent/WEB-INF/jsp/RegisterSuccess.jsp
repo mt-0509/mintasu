@@ -7,10 +7,8 @@
 <title>みんタス</title>
 </head>
 <body>
-<form action="/mintasu/Signup" method="post">
-名前:<input type="text" name="name"><br>
-pass:<input type="password" name="pass"><br>
-<input type="submit" value="登録する">
-</form>
+<h1>登録が完了しました</h1>
+<p>ログインしてください</p>
+<a href="/mintasu/CO_Login">ログインページにいく</a>
 </body>
 </html>
