@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.AccountDAO;
+import dao.UserDAO;
 import model.UserBeans;
-import model.otameshi;
 
 
 /**
@@ -43,47 +42,38 @@ public class CO_LoginCheck extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 
-
-		// アカウントDAOをインスタンス化してメソッドを使える
-		// 仮引数を何にするのか不明
-
-		// loginIdとpassをjspから受け取る必要がある
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 
-		System.out.println(name);
-		System.out.println(pass);
+		// login.jspから受け取ったnameとpassをビーンズにセットする
+		UserBeans ub = new UserBeans();
+		ub.setName(name);
+		ub.setPass(pass);
 
-		// login.jspから受け取ったログインIDとpassをビーンズに
-		UserBeans UB = new UserBeans();
-		UB.setName(name);
-		UB.setPass(pass);
-
-		// アカウントの有無を検索
+		// アカウントの有無を検索する
 		// 検索したアカウント情報を取得
-		AccountDAO ad = new AccountDAO();
-		UserBeans returnAb = ad.findAccount(UB);
-
-		otameshi ot = new otameshi();
-		ot.ooo();
+		UserDAO ad = new UserDAO();
+		UserBeans returnAb = ad.findAccount(ub);
 
 		if (returnAb != null) {
-			// セッションにアカウントを情報を登録する
 			HttpSession session = request.getSession();
-			session.setAttribute("User", returnAb);
+			session.setAttribute("user", returnAb);
 
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/loginSuccess.jsp");
 			rd.forward(request, response);
-			System.out.println("成功だよ");
+			System.out.println("画面遷移成功");
 		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/loginError.jsp");
 			rd.forward(request, response);
-			System.out.println("失敗");
-			System.out.println(returnAb);
-
+			System.out.println("画面遷移失敗");
 		}
+
+
+
+
+
+
 
 
 

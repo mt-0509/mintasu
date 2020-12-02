@@ -9,7 +9,7 @@ public class DBConnect {
         Connection con = null; // 初期化
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mintas/mintasudb/user", "root", "mtmt0509");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mintas/mintasudb", "root", "mtmt0509");
             System.out.println("DB接続成功!!!");
             return con;
         }catch(ClassNotFoundException e){

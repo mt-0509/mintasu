@@ -13,9 +13,9 @@ aaa.
 <body>
 <h1>みんタス!</h1>
 <p>みんなのタスク管理アプリ</p>
-<a href="/mintasu/Signup">新規登録</a><br>
-<a href="/mintasu/Login">ログイン</a>
-<a href="/mintasu/News">お知らせ</a>
+<a href="/mintasu/CO_Signup">新規登録</a><br>
+<a href="/mintasu/CO_Login">ログイン</a>
+<a href="/mintasu/CO_News">お知らせ</a>
 <p>このアプリはタスクを公開して自分が掲げたタスクをみんなにみてもらうアプリです。</p>
 <p>ぜひみんなと一緒にタスクを管理して成長していきましょう！！！</p>
 </body>

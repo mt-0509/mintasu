@@ -29,6 +29,7 @@ public class otameshi {
 		     while (rs.next()) {
 		    	 String na = rs.getString("pass");
 		    	 System.out.println(na);
+		    	 System.out.println("俺の名前は真武だ！！！");
 		     }
 		     rs.close();
 		     stmt.close();

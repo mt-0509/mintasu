@@ -7,7 +7,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Applications/Eclipse_2020-06.app/Contents/workspace/mintasu/WebContent/WEB-INF/lib/mysql-connector-java-8.0.22.jar">
+	<classpathentry kind="lib" path="/Users/toshimasa/Desktop/mysql-connector-java-8.0.22 2/mysql-connector-java-8.0.22.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

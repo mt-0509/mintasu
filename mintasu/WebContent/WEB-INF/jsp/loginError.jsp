@@ -7,7 +7,8 @@
 <title>みんなのタスク管理アプリ</title>
 </head>
 <body>
-<h1>残念11111</h1>
-<p>次も頑張ろうな</p>
+<h1>ログインに失敗しました</h1>
+<p>もう1度やりなおしてください</p>
+<a href="/mintasu/index.jsp">トップに戻る</a>
 </body>
 </html>

@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Signup
  */
-@WebServlet("/Signup")
-public class Signup extends HttpServlet {
+@WebServlet("/CO_Signup")
+public class CO_Signup extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
