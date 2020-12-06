@@ -9,11 +9,11 @@ UserBeans user = (UserBeans) session.getAttribute("user");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>みんタス</title>
 </head>
 <body>
 <h1>ログイン成功！！！</h1>
 <p>ようこそ<%= user.getName() %>さん</p>
-<a href="mintasu">投稿画面にいく</a>
+<a href="/mintasu/CO_Post">投稿画面にいく</a>
 </body>
 </html>
