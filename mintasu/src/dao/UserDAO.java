@@ -63,7 +63,6 @@ public class UserDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("SQLのとこ");
 			return null;
 		}
 		return returnAb;

@@ -27,7 +27,7 @@ public class UserFindCommentDAO {
 			e.printStackTrace();
 		}
 		try (Connection con = DriverManager.getConnection(jdbcUrl, jdbcId, jdbcPass)) {
-			String sql = "select * from user";
+			String sql = "select * from post";
 			Statement st = con.createStatement();
 
 			try {
@@ -38,7 +38,6 @@ public class UserFindCommentDAO {
 				while (rs.next()) {
 					// DBから取り出したname,commentをJavaBeansにセットする
 					UserBeans ub = new UserBeans();
-					ub.setName(rs.getString("name"));
 					ub.setComment(rs.getString("comment"));
 
 					// リストに1個ずつ格納。末尾に要素が追加されていく

@@ -21,9 +21,14 @@ public class UserAddCommentDAO {
 		}
 
 		try (Connection con = DriverManager.getConnection(jdbcUrl, jdbcId, jdbcPass)) {
-			PreparedStatement ps = con.prepareStatement("INSERT INTO user (comment) VALUES(?)");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO post (comment) VALUES(?)");
 
-			ps.setString(1, ub.getComment());
+			if (ub.getComment().length() > 0) {
+				ps.setString(1, ub.getComment());
+			} else {
+				System.out.println("コメントを投稿してください");
+			}
+
 
 			// ひな形を送信
 			int r = ps.executeUpdate();
